@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développeur d'applications - Lorraine - CV</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!-- BootStrap -->
+    <link href="BS/css/bootstrap.css" rel="stylesheet">
+    <link href="BS/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="anthonybobenrieth.css">
+    <script src="BS/js/jquery.js"></script>
+    <script src="BS/js/effects.js"></script>
+    <script src="BS/js/bootstrap.min.js"></script>
+    <script src="BS/js/jquery.validate.min.js"></script>
+    <script src="BS/js/touchSwipe.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-41866742-1', 'bobenrieth.fr');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<img class="fond" src="img/fond.webp" alt="fond" >
+<video class="fond .visible-desktop" id="fondVid" autoplay="autoplay" loop="loop">
+    <source src="fond.webm">
+    <source src="fond.mp4">
+</video>
+<div id="mainContainer" class="container" style="position:relative; height: 100%;">
+<div id="recommandation" >
+    <div class="fb-like" data-href="http://anthony.bobenrieth.fr/" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-action="recommend"></div>
+    <script type="IN/Share" data-url="http://anthony.bobenrieth.fr/" data-counter="right"></script>
+    <div class="g-plusone" data-size="medium" data-href="http://anthony.bobenrieth.fr/"></div>
+</div>
+    <nav class="row header">
+        <div id="canvasLogo" class="hidden-phone"></div>
+        <ul id="Onglets">
+            <li data-target="#Accueil" style="opacity:1" data-color="#0e90d2" > Accueil</li>
+            <li data-target="#CV" style="white-space: nowrap" data-color="#5dd29b">C. Vitæ</li>
+            <li data-target="#ContactPage" data-color="#f4d044">Contact</li>
+        </ul>
+        <div id="TabSelector" style="height: 8px; width: 115px; background: #0e90d2;position: absolute; top: 55px; left: 10px; margin: 10px 0px;"></div>
+
+    </nav>
+    <div id="Accueil" class="row-fluid" style="display: block;">
+        <div class="span3" style="position: relative;">
+            <h3>PRÉSENTATION</h3>
+            <img src="img/profil.jpg" style="width:100%" alt="photo de partiel d'anthony bobenrieth">
+            <div class="paragraphe">
+                <h2>Bienvenue</h2>
+                <p>Diplomé d'une licence en Génie Logiciel,
+                    et fort de trois années d'apprentissage sur le framework .NET ainsi que dans le web,
+                    je suis à la recherche d'un poste qui me permettra d'exploiter et d'améliorer mon champs de compétences.</p>
+            </div>
+            <span style="font-weight: bold; font-size: 15em; width: 800px; height: 56px "></span>
+            <a class="socialNetworkEntry" style="background:#194269;" href="http://fr.linkedin.com/pub/anthony-bobenrieth/75/162/348"><img src="img/Linkedin.png" style="height: 100%" alt="logo Linkedin"><span style="">Profil Linkedin</span></a>
+            <a class="socialNetworkEntry" title="Author: Anhtony Bobenrieth on Google+"  style="background:#be3a29;" href="//plus.google.com/118229217825498890508??rel=author" rel=”author“><img src="img/gplus.png" style="height: 100%" alt="logo Google+"><span style="">Profil Google+</span></a>
+            <a class="socialNetworkEntry" style="background:#1897c6;" href="https://twitter.com/Vl0z"><img src="img/Twitter.png" style="height: 100%" alt="logo Linkedin"><span style="">Profil Twitter</span></a>
+        </div>
+        <div class="span4">
+            <h3>COMPÉTENCES</h3>
+            <div class="paragraphe">
+            <h4>.NET</h4>
+            <ul>
+                <li>Interfaces WPF</li>
+                <li>Entity framework (Code first/Schema)</li>
+                <li>Linq Queries</li>
+                <li>Architecture MVVM</li>
+                <li>C#</li>
+            </ul>
+            <h4>Web</h4>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>PHP (script et interraction BDD)</li>
+                <li>JavaScript (JQuery, Mootools...)</li>
+            </ul>
+            <h4>Collaboration</h4>
+            <ul>
+                <li>Scrum</li>
+                <li>TFS/SVN</li>
+            </ul>
+            <h4>Analyse</h4>
+            <ul>
+                <li>UML</li>
+                <li>Merise</li>
+            </ul>
+            <h4>Autres langages</h4>
+            <ul>
+                <li>TSQL/PLSQL</li>
+                <li>C++</li>
+                <li>Java</li></ul>
+            <h4>Divers</h4>
+            <ul>
+                <li>Formation réseau</li>
+                <li>Infographie 2D/3D</li></ul>
+            </div>
+        </div>
+        <div class="span5" >
+            <h3>DERNIERS PROJETS</h3>
+            <div id="accueilSliders">
+                <img src="img/thumbs/IntraDune.png" data-sub="<b>Salusa</b>, extranet de gestion de demandes" style="position: relative;" class="thumb" alt="miniature de Salusa">
+                <img src="img/thumbs/Corrinos.png" data-sub="<b>Corrinos</b>, système d'archivage de programmes machine" class="thumb"  alt="miniature de Corrinos">
+                <img src="img/thumbs/SiteDune.png" data-sub="<b>dune-strategie.fr</b>, site vitrine de la société" class="thumb"  alt="miniature du site de Dune">
+                <img src="img/thumbs/Mentat.png" data-sub="<b>Mentat</b>, GED adaptable compaptible Ms-Office" class="thumb"  alt="miniature de Mentat">
+                <img src="img/thumbs/Gestae.png" data-sub="<b>Gestae</b>, logiciel de facturation" class="thumb"  alt="miniature de Gestae">
+                <div id="subAccSlider">
+                    <b>Gestae,</b> logiciel de facturation
+                </div>
+            </div>
+            <div class="paragraphe">
+            <dl>
+                <dd>Facturation Auto-Entrepreneur</dd>
+                <dd><span class="label label-info">WPF</span>
+                    <span class="label label-info"><abbr title="Entity Framework Code First" class="initialism">EF Code First</abbr></span>
+                    <span class="label label-info">Rapports WPF</span>
+                </dd></dl>
+
+            <dl>
+                <dd>GED adaptive</dd>
+                <dd><span class="label label-info">WPF</span>
+                    <span class="label label-info">Entity Framework</span>
+                    <span class="label label-info">Addin VSTO</span>
+                </dd>
+            </dl>
+
+            <dl>
+                <dd>Site vitrine</dd>
+                <dd><span class="label label-info">Html/Css</span>
+                    <span class="label label-info">JQuery</span>
+                </dd>
+            </dl>
+
+            <dl>
+                <dd>Centralisation de programmes</dd>
+                <dd><span class="label label-info">Winform</span>
+                    <span class="label label-info">Entity Framework</span>
+                </dd>
+            </dl>
+
+            <dl>
+                <dd>Extranet</dd>
+                <dd><span class="label label-info">Css/Html</span>
+                    <span class="label label-info">Php</span>
+                    <span class="label label-info">Mootools</span>
+                </dd>
+            </dl>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="CV" class="row-fluid" >
+        <div class="span7"  >
+            <h3>PARCOURS</h3>
+            <div></div>
+            <div id="CVCanvas" style="overflow: hidden; position: relative" ><img id="apercuCV" src="img/apercuCV.png" style="width: 100%;" alt="Apercu temporaire du svg de CV" />
+
+                </div>
+            <div style="padding: 15px; background:rgba(255,255,255,0.8)">
+                <h4>Télecharger mon CV complet:</h4>
+                <ul class="fileList">
+                    <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.pdf"><img src="img/pdf.png" alt="format pdf">AnthonyBobenriethCV.pdf</a></li>
+                    <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.oxps"><img src="img/xps.png" alt="format oxps">AnthonyBobenriethCV.oxps</a></li>
+                    <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.docx"><img src="img/doc_icon.png" alt="format svg">AnthonyBobenriethCV.docx</a></li>
+                </ul>
+            </div>
+       </div>
+        <div class="span5">
+            <h3>DÉTAILS</h3>
+            <div id="DescptBody" >
+                <div data-target="Section4">
+                    <div class="sectionHeader">
+                        <ul>
+                            <li data-target="#SctnDune" >Dune</li>
+                            <li data-target="#SctnLP">Licence Pro GL</li>
+                            <li data-target="#SctnBTS">BTS IG</li>
+                        </ul>
+                    </div>
+                    <div style="position: relative">
+                        <div style="padding-right: 15px; visibility: hidden">
+                            <ul>
+                                <li>Résultats: <b>Admis</b> (15.13)</li>
+                                <li>Programme abordé
+                                    <ul>
+                                        <li>
+                                            Développement:
+                                            <ul>
+                                                <li><b>Algoritmie</b> de base</li>
+                                                <li><b>C</b>: Application des algo en mode Console</li>
+                                                <li><b>C#</b>: Petite application de compta winform</li>
+                                                <li><b>Html/Css/PHP</b>: Site de vente de poissons</li>
+                                                <li>Initiation à l'analyse avec <b>Merise</b></li>
+                                                <li>Initiation au base de données avec <b>MySQL</b></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Réseau:
+                                            <ul>
+                                                <li>Notions fondamentales (OSI, Topologie...)</li>
+                                                <li>Protocoles de base (Ethernet/IP/ARP/ICMP...)</li>
+                                                <li>Exploitation des systeme d'interconnexions</li>
+                                                <li>Certification CISCO Discovery</li>
+                                            </ul>
+                                        </li>
+                                        <li>Fondamentaux des architectures materiels</li>
+                                    </ul>
+                                </li>
+
+                                <li>Rapports de fin d'étude
+                                    <ul>
+                                        <li>
+                                            Note de synthese
+                                        </li>
+                                        <li>
+                                            Pratique des Techniques Informatiques
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="SctnDune" class="sectionBody" style="padding-right: 15px;">
+                            <div>
+                                <img class="hidden-tablet" src="img/dunelogo2.png" alt="Logo de Dune"/>
+                                <img src="img/title3.png" alt="Titre de Dune"/>
+                            </div>
+                            <ul>
+                                <li>Employeur pour mes 3 années d'apprentissage, en BTS IG puis en Licence pro Génie logiciel</li>
+                                <li>Projets
+                                    <ul>
+                                        <li>
+                                            <b>PHP/HTML/JS</b>: Outils web contenu dans un extranet
+                                        </li>
+                                        <li>
+                                            <b>Winform/EF</b>: Client de centralisation de programme CNC
+                                        </li>
+                                        <li>
+                                            <b>HTML/JQuery</b>: Site de presentation de la société
+                                        </li>
+                                        <li>
+                                            <b>WPF/EF/VSTO</b>: GED adaptive de liaison de documents.
+                                        </li>
+                                        <li>
+                                            <b>WPF/EF</b>: Logiciel de facturation pour Auto-Entrepreneurs.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    A déposé le bilan en juillet 2013
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="SctnLP" class="sectionBody" >
+                            <ul>
+                                <li><a href="img/ResultatsLP.html">Résultats: <b>Admis</b> (15.42)</a></li>
+                                <li>Programme abordé
+                                    <ul>
+                                        <li>
+                                            Développement:
+                                            <ul>
+                                                <li><b>JEE</b>: BlindTest + Facturation Cafeteria</li>
+                                                <li><b>Java</b>: Traducteur Morse + Proxy</li>
+                                                <li><b>PHP/SOAP</b>: Client de location de voiture</li>
+                                                <li><b>C#/WPF</b>: UI d'exploitation pour serveur Oracle</li>
+                                                <li><b>Veille tech.</b>: réalité augmentée sur Android</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Analyse:
+                                            <ul>
+                                                <li><b>UML</b></li>
+                                                <li><b>Merise</b></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Base de données:
+                                            <ul>
+                                                <li>Administration <b>Oracle</b></li>
+                                                <li><b>PLSQL</b> + <b>SQL3</b></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Gestion de projet (<b>Scrumm</b>, <b>XP</b>)
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="download/Memoire.pdf">Mémoire de fin d'études</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="SctnBTS" class="sectionBody" >
+                            <ul>
+                                <li><a href="img/bts.png">Résultats: <b>Admis</b> (15.13)</a></li>
+                                <li>Programme abordé
+                                    <ul>
+                                        <li>
+                                            Développement:
+                                            <ul>
+                                                <li><b>Algoritmie</b> de base</li>
+                                                <li><b>C</b>: Application des algo en mode Console</li>
+                                                <li><b>C#</b>: Petite application de compta winform</li>
+                                                <li><b>Html/Css/PHP</b>: Site de vente de poissons</li>
+                                                <li>Initiation à l'analyse avec <b>Merise</b></li>
+                                                <li>Initiation au base de données avec <b>MySQL</b></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Réseau:
+                                            <ul>
+                                                <li>Notions fondamentales (OSI, Topologie...)</li>
+                                                <li>Protocoles de base (Ethernet/IP/ARP/ICMP...)</li>
+                                                <li>Exploitation des systeme d'interconnexions</li>
+                                                <li>Certification CISCO Discovery</li>
+                                            </ul>
+                                        </li>
+                                        <li>Fondamentaux des architectures materiels</li>
+                                    </ul>
+                                </li>
+
+                                <li>Rapports de fin d'étude
+                                    <ul>
+                                        <li>
+                                            <a href="download/NoteDeSynthese.pdf">Note de synthese</a>
+                                        </li>
+                                        <li>
+                                            <a href="download/PTI.zip">Pratique des Techniques Informatiques</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div data-target="Section3">
+                    <div class="sectionHeader">
+                        <ul>
+                            <li data-target="#SctnBac" >Bac Pro SEN</li>
+                        </ul>
+                    </div>
+                    <div style="position: relative">
+                        <div style="padding-right: 15px;">
+                            <ul>
+                                <li><a href="img/bac.png.png">Résultats: <b>Admis</b> (16.89)</a></li>
+                                <li>Réseau:
+                                    <ul>
+                                        <li>Notions fondamentales (OSI, Topologie...)</li>
+                                        <li>Protocoles de base (Ethernet/IP/ARP/ICMP...)</li>
+                                        <li>Exploitation des systeme d'interconnexions</li>
+                                        <li>Administration serveur Microsoft et Linux</li>
+                                        <li>Configuration par terminal</li>
+                                        <li>Hyperviseur</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Stage à la Préfecture de l'Yonne en tant que technicien (maintenance du parc, réferencement et suivi)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div data-target="Section1">
+                    <div class="sectionHeader">
+                        <ul>
+                            <li data-target="#SctnBac" >Projets personnels</li>
+                        </ul>
+                    </div>
+                    <div style="position: relative">
+                        <div style="padding-right: 25px; text-align: justify;">
+                            <img src="img/Snakevlozds.gif" style="float: right; width: 150px; padding-left: 15px" alt="Jeu snake sur DS">
+                           <div>J'ai fait mes debuts dans le domaine du développement à travers la réalisations de petits projets ludiques allant du simple site php de gestion de note au loader de map BSP sur console portable.</div>
+                           <div>C'est dans ce contexte que j'ai pu également m'initié aux techniques de bases de l'imagerie 3D et 2D pour en tirer parties dans mes projets d'aujourd'hui.</div>
+                            <img src="img/cloud.png" style="padding: 10px;" alt="Image de model 3D">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <div  id="ContactPage" class="row-fluid">
+        <div class="span5">
+            <h3>FORMULAIRE DE CONTACT</h3>
+            <div class="paragraphe modal-form" style="min-height: 320px">
+                <div id="contactAnswer">
+                    Message envoyé avec succès.
+                </div>
+                <form id="formContact" >
+                <fieldset style="text-align: center">
+                    <input id="NomUser" name="NomUser" class="span12" type="text" required placeholder="Votre nom..."> <br/>
+                    <input id="MailUser" name="MailUser" class="span12" type="email" required placeholder="Votre adresse email...">   <br/>
+                    <textarea id="MessageUser" name="MessageUser" class="span12" required rows="8"  placeholder="Contenue du message..."></textarea>
+                </fieldset>
+                    <div style="text-align: right">
+                        <span id="errorContact" style="color: red;"></span>
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
+                        <button id="contactBut" type="button" class="btn btn-primary"  data-loading-text="Envoi en cours...">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="span5">
+            <h3>ME CONTACTER PAR MAIL</h3>
+                <a class="socialNetworkEntry" style="background:#ffba18;" href="http://www.google.com/recaptcha/mailhide/d?k=016eui96WQXDuA_SCFBNRPFg==&amp;c=JcYqvWcGBL-8NI8269ZbuYDaFNDumXz3ezwRml3tpW8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075016eui96WQXDuA_SCFBNRPFg\75\75\46c\75JcYqvWcGBL-8NI8269ZbuYDaFNDumXz3ezwRml3tpW8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" role="button" data-toggle="modal" ><img src="img/E-mail.png" alt="Bouton courrier"><span style="">Obtenir mon adresse mail</span></a>
+        </div>
+    </div>
+
+</div>
+<div class="navbar navbar-fixed-bottom">
+    <div class="container">
+        <div  style="background: rgba(0,0,0,0.5); color: #ffffff; padding: 5px 20px ">
+
+
+            <img src="img/html5badge.png" >
+            <span style=" vertical-align: middle; text-align: right;">© 2013 - Anthony Bobenrieth</span>
+        </div>
+    </div>
+</div>
+
+
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+    lang: fr_FR
+</script>
+<script type="text/javascript">
+    window.___gcfg = {lang: 'fr'};
+
+    (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+</script>
+</body>
+</html>
