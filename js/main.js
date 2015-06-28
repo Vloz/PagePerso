@@ -1,4 +1,5 @@
 $(window).load(function(){
+    document.getElementById('year').innerHTML =new Date().getFullYear();
 
 
 
@@ -24,14 +25,14 @@ $(window).load(function(){
     });
     $(window).trigger('resize');
     initAccueilSlide();
-    $('#mainContainer').swipe({
+/*    $('#mainContainer').swipe({
         swipeLeft:function(event, direction, distance, duration, fingerCount) {
             $(window.selectedMenu).next().trigger('click');
         },
         swipeRight:function(event, direction, distance, duration, fingerCount) {
             $(window.selectedMenu).prev().trigger('click');
         }
-    });
+    });*/
     $('.sectionHeader').find('li').on('touchstart click',function(){sctHChange.call(this,false);} );
     $('#Onglets').find('li').bind('click',ongletChange);
 
@@ -40,6 +41,10 @@ $(window).load(function(){
         $('#leftAccolade').css('display','block');
         $(this).addClass("logoLoaded");
     });
+    if(window.location.hash!='')
+        $('#Onglets').find('[data-target="'+window.location.hash+'"]').trigger('click');
+
+
 
 });
 
@@ -49,51 +54,6 @@ function initAccueilSlide()
 
 }
 
-$(document).ready(function(){
-
-    $('#formContact').validate(
-        {
-            rules: {
-                NomUser: {
-                    minlength: 5,
-                    required: true
-                },
-                MailUser: {
-                    required: true,
-                    email: true
-                },
-                MessageUser: {
-                    minlength: 15,
-                    required: true
-                }
-            }
-        });
-    $('#contactBut').button();
-    $('#contactBut').on('click',function() {
-       if(!$('#formContact').valid())
-        return;
-
-       $('#contactBut').button('loading');
-
-        $.post("http://contact.eu01.aws.af.cm:80",{userName: $('#NomUser').val(), userMail: $('#MailUser').val() , mailContent: $('#MessageUser').val() },'json')
-            .done(function(data) {
-                $('#formContact').hide();
-                $('#contactAnswer').html(data);
-                $('#contactAnswer').show('drop',{direction:'up'});
-                setTimeout(function(){
-                    $('#contactAnswer').hide('drop',{direction:'up'}, function(){
-                        $('#contactModal input').val('');
-                        $('#MessageUser').val('');
-                        $('#formContact').show();
-                    });
-
-
-                },5000);
-            })//.fail(function(error) { $('#errorContact').html("Erreur lors de l'envoi.");alert(error); $('#errorContact').show('drop'); })
-            .always(function(){$('#contactBut').button('reset');}
-        );
-    });
-});
 
 
 
@@ -127,15 +87,15 @@ function refreshSelector()
 
 function ongletChange()
 {
+    window.location.hash =$(this).data('target');
     if(window.selectedMenu === this)
         return;
 
-    if($(window.selectedMenu).data('target') == '#CV')
-    {
-        $('#apercuCV').css('visibility','visible');
-    }
-    $('#Onglets').find('li').unbind('click');
-    $('#Onglets').find('li').css('opacity','');
+
+    var onglets = $('#Onglets').find('li');
+    onglets.unbind('click');
+    onglets.css('opacity','');
+
     $(this).css('opacity',1);
     var cible = $(this).data('target');
     var XMLrequest = new XMLHttpRequest(); // new XML request
@@ -143,12 +103,16 @@ function ongletChange()
     {
         XMLrequest.open("GET", 'img/cv.svg', false); // URL of the SVG file on server
         XMLrequest.send(null); // get the SVG file
-        $('#CVCanvas').children("svg").remove();
         document.CV = XMLrequest.responseXML.getElementsByTagName("svg")[0];
     }
 
     var o = $(window.selectedMenu).nextAll('li[data-target="'+cible+'"]').length === 0;
-    $('.row-fluid:visible').hide('slide', {direction: o?'right':'left',
+    var current = $('.row:visible');
+    if(current[0].id == 'CV' && document.CVSVG != null) {
+        $(document.CVSVG).css('display', 'none');
+        $('#apercuCV').css('visibility', 'visible');
+    }
+    current.hide('slide',{direction: o?'right':'left',
         duration: 'slow',
         easing: 'easeOutQuart'});
 
@@ -160,25 +124,31 @@ function ongletChange()
         $('#Onglets').find('li').bind('click',ongletChange);
         if(cible=="#CV")
         {
+            $('#apercuCV').css('visibility', 'hidden');
             var d =$('#CVCanvas');
-            $('#apercuCV').css('visibility','hidden');
-            d.append(document.CV);
-            d.children("svg").css('position','absolute');
-            d.children("svg").css('top','0');
-            d.children("svg").css('left','0');
 
-            var t = $(".SvgSection");
-            t.css('opacity','0');
-            var age =$("#tspan4964").get(0);
-            age.textContent= '('+getMyAge()+'ans)';
-            var sections = $('.SvgSection');
-            sections.bind('touchstart click', svgSectionClick);
-            $('.SvgSection').insertAfter($($('#CVCanvas').find('svg').children().last()));
-            sections.css('cursor','pointer');
-            //Selection par defaut du CV.svg
-            $('#Section4').trigger('click');
+            if(d.children('svg').length==0)
+            {
+                d.append(document.CV);
+                document.CVSVG = d.children('svg')[0];
+                d.children("svg").css('position','absolute');
+                d.children("svg").css('top','0');
+                d.children("svg").css('left','0');
+
+                var t = $(".SvgSection");
+                t.css('opacity','0');
+                var age =$("#tspan4964").get(0);
+                age.textContent= '('+getMyAge()+'ans)';
+                var sections = $('.SvgSection');
+                sections.bind('touchstart click', svgSectionClick);
+                sections.insertAfter($($('#CVCanvas').find('svg').children().last()));
+                sections.css('cursor','pointer');
+                //Selection par defaut du CV.svg
+                $('#Section4').trigger('click');
+            }
+            else
+                $(document.CVSVG).css('display','block');
         }
-
     });
     window.selectedMenu = this;
     refreshSelector();

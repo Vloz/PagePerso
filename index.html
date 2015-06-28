@@ -4,17 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Développeur d'applications - Lorraine - CV</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700|Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="img/favicon.ico" />
-    <!-- BootStrap -->
     <link href="BS/css/bootstrap.css" rel="stylesheet">
-    <link href="BS/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="anthonybobenrieth.css">
     <script src="BS/js/jquery.js"></script>
-    <script src="BS/js/effects.js"></script>
+    <script src="BS/js/jquery-ui.min.js"></script>
     <script src="BS/js/bootstrap.min.js"></script>
-    <script src="BS/js/jquery.validate.min.js"></script>
-    <script src="BS/js/touchSwipe.js"></script>
     <script src="js/main.js"></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -33,11 +29,11 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=855796284510908";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<img class="fond" src="img/fond.webp" alt="fond" >
-<video class="fond .visible-desktop" id="fondVid" autoplay="autoplay" loop="loop">
+<img class="fond visible-xs-*" src="img/fond.jpg" alt="fond" >
+<video class="fond hidden-xs" id="fondVid" autoplay="autoplay" loop="loop">
     <source src="fond.webm">
     <source src="fond.mp4">
 </video>
@@ -47,70 +43,77 @@
     <script type="IN/Share" data-url="http://anthony.bobenrieth.fr/" data-counter="right"></script>
     <div class="g-plusone" data-size="medium" data-href="http://anthony.bobenrieth.fr/"></div>
 </div>
-    <nav class="row header">
-        <div id="canvasLogo" class="hidden-phone"></div>
+    <nav>
+        <div id="canvasLogo" class="hidden-xs"></div>
         <ul id="Onglets">
             <li data-target="#Accueil" style="opacity:1" data-color="#0e90d2" > Accueil</li>
             <li data-target="#CV" style="white-space: nowrap" data-color="#5dd29b">C. Vitæ</li>
-            <li data-target="#ContactPage" data-color="#f4d044">Contact</li>
         </ul>
         <div id="TabSelector" style="height: 8px; width: 115px; background: #0e90d2;position: absolute; top: 55px; left: 10px; margin: 10px 0px;"></div>
 
     </nav>
-    <div id="Accueil" class="row-fluid" style="display: block;">
-        <div class="span3" style="position: relative;">
+    <div id="Accueil" class="row" style="display: block;position: absolute;">
+        <div class="col-md-3" style="position: relative;">
             <h3>PRÉSENTATION</h3>
             <img src="img/profil.jpg" style="width:100%" alt="photo de partiel d'anthony bobenrieth">
-            <div class="paragraphe">
-                <h2>Bienvenue</h2>
+            <div id="intro" class="paragraphe">
+                <h2>Bienvenue,</h2>
                 <p>Diplomé d'une licence en Génie Logiciel,
-                    et fort de trois années d'apprentissage sur le framework .NET ainsi que dans le web,
-                    je suis à la recherche d'un poste qui me permettra d'exploiter et d'améliorer mon champs de compétences.</p>
+                    et fort de trois années d'apprentissage sur le framework .NET ainsi que sur les standards du web,
+                    je suis à la recherche d'un poste qui me permettrait d'exploiter et d'améliorer mon champs de compétences.</p>
             </div>
             <span style="font-weight: bold; font-size: 15em; width: 800px; height: 56px "></span>
-            <a class="socialNetworkEntry" style="background:#194269;" href="http://fr.linkedin.com/pub/anthony-bobenrieth/75/162/348"><img src="img/Linkedin.png" style="height: 100%" alt="logo Linkedin"><span style="">Profil Linkedin</span></a>
-            <a class="socialNetworkEntry" title="Author: Anhtony Bobenrieth on Google+"  style="background:#be3a29;" href="//plus.google.com/118229217825498890508??rel=author" rel=”author“><img src="img/gplus.png" style="height: 100%" alt="logo Google+"><span style="">Profil Google+</span></a>
-            <a class="socialNetworkEntry" style="background:#1897c6;" href="https://twitter.com/Vl0z"><img src="img/Twitter.png" style="height: 100%" alt="logo Linkedin"><span style="">Profil Twitter</span></a>
+            <a class="socialNetworkEntry" style="background:#8fbd36;" href="http://www.google.com/recaptcha/mailhide/d?k=016eui96WQXDuA_SCFBNRPFg==&amp;c=JcYqvWcGBL-8NI8269ZbuYDaFNDumXz3ezwRml3tpW8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075016eui96WQXDuA_SCFBNRPFg\75\75\46c\75JcYqvWcGBL-8NI8269ZbuYDaFNDumXz3ezwRml3tpW8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" role="button" data-toggle="modal" >
+                <img src="img/icons/email.png" style="height: 100%" alt="logo email"><span style="">Adresse Email</span></a>
+            <a class="socialNetworkEntry" style="background:#194269;" href="http://fr.linkedin.com/pub/anthony-bobenrieth/75/162/348"><img src="img/icons/linkedin.png" style="height: 100%" alt="logo Linkedin"><span style="">Profil Linkedin</span></a>
+            <a class="socialNetworkEntry" title="Author: Anhtony Bobenrieth on Google+"  style="background:#be3a29;" href="//plus.google.com/118229217825498890508??rel=author" rel=”author“><img src="img/icons/googleplus.png" style="height: 100%" alt="logo Google+"><span style="">Profil Google+</span></a>
+            <a class="socialNetworkEntry" style="background:#1897c6;" href="https://twitter.com/Vl0z"><img src="img/icons/twitter.png" style="height: 100%" alt="logo Linkedin"><span style="">Profil Twitter</span></a>
+            <a class="socialNetworkEntry" style="background:#FC9A24;" href="http://stackoverflow.com/users/954853/anthony-bobenrieth"><img src="img/icons/stackoverflow.png" style="height: 100%" alt="logo stackoverflow"><span style="">Profil StackOverflow</span></a>
+            <a class="socialNetworkEntry" style="background:#414141;" href="https://github.com/Vloz"><img src="img/icons/github.png" style="height: 100%" alt="logo github"><span style="">Profil Github</span></a>
         </div>
-        <div class="span4">
+        <div id="competences" class="col-md-4">
             <h3>COMPÉTENCES</h3>
             <div class="paragraphe">
             <h4>.NET</h4>
             <ul>
-                <li>Interfaces WPF</li>
-                <li>Entity framework (Code first/Schema)</li>
-                <li>Linq Queries</li>
-                <li>Architecture MVVM</li>
                 <li>C#</li>
+                <li>WPF/XAML</li>
+                <li>Entity framework (Code first/Schema)</li>
+                <li>LINQ Queries</li>
+                <li>Architecture MVVM</li>
             </ul>
-            <h4>Web</h4>
+            <h4>FrontEnd</h4>
             <ul>
-                <li>HTML/CSS</li>
-                <li>PHP (script et interraction BDD)</li>
-                <li>JavaScript (JQuery, Mootools...)</li>
+                <li>Html5/Css3</li>
+                <li>Dart</li>
+                <li>Polymer</li>
+                <li>Native Client</li>
+                <li>Amsjs (Emscripten)</li>
+                <li>Javascript</li>
+                <li>ChromeApp</li>
             </ul>
-            <h4>Collaboration</h4>
+            <h4>BackEnd</h4>
             <ul>
+                <li>AppEngine</li>
+                <li>Php</li>
+                <li>Dart</li>
+                <li>Cloud Enpoints</li>
+                <li>ManagedVm</li>
+                <li>Docker</li>
+            </ul>
+            <h4>Notions</h4>
+            <ul>
+                <li>C/C++</li>
+                <li>Java (J2EE)</li>
+                <li>Git/SVN/TFS</li>
                 <li>Scrum</li>
-                <li>TFS/SVN</li>
+                <li>SQL (MySQL/PSQL/TSQL)</li>
+                <li>Infographie</li>
+                <li>UML/Merise</li>
             </ul>
-            <h4>Analyse</h4>
-            <ul>
-                <li>UML</li>
-                <li>Merise</li>
-            </ul>
-            <h4>Autres langages</h4>
-            <ul>
-                <li>TSQL/PLSQL</li>
-                <li>C++</li>
-                <li>Java</li></ul>
-            <h4>Divers</h4>
-            <ul>
-                <li>Formation réseau</li>
-                <li>Infographie 2D/3D</li></ul>
             </div>
         </div>
-        <div class="span5" >
+        <div class="col-md-5" >
             <h3>DERNIERS PROJETS</h3>
             <div id="accueilSliders">
                 <img src="img/thumbs/IntraDune.png" data-sub="<b>Salusa</b>, extranet de gestion de demandes" style="position: relative;" class="thumb" alt="miniature de Salusa">
@@ -118,11 +121,23 @@
                 <img src="img/thumbs/SiteDune.png" data-sub="<b>dune-strategie.fr</b>, site vitrine de la société" class="thumb"  alt="miniature du site de Dune">
                 <img src="img/thumbs/Mentat.png" data-sub="<b>Mentat</b>, GED adaptable compaptible Ms-Office" class="thumb"  alt="miniature de Mentat">
                 <img src="img/thumbs/Gestae.png" data-sub="<b>Gestae</b>, logiciel de facturation" class="thumb"  alt="miniature de Gestae">
+                <img src="img/thumbs/InputZone.png" data-sub="<a href='http://input.zone/'><b>input.zone</b></a>, prototype de convertisseur web de fichiers" class="thumb"  alt="miniature de InputZone">
                 <div id="subAccSlider">
-                    <b>Gestae,</b> logiciel de facturation
+                    <a href="http://input.zone/"><b>input.zone</b></a>, prototype de convertisseur web de fichiers
                 </div>
             </div>
             <div class="paragraphe">
+            <dl>
+                <dd><a href="http://input.zone/">Convertisseur web de fichiers</a></dd>
+                <dd><span class="label label-info">Polymer</span>
+                    <span class="label label-info"><abbr title="Google App Engine" class="initialism">GAE</abbr></span>
+                    <span class="label label-info">Dart</span>
+                    <span class="label label-info">Javascript</span>
+                    <span class="label label-info">PNaCl</span>
+                    <span class="label label-info">Asmjs/Emscripten</span>
+                </dd></dl>
+
+            <dl>
             <dl>
                 <dd>Facturation Auto-Entrepreneur</dd>
                 <dd><span class="label label-info">WPF</span>
@@ -164,23 +179,22 @@
 
     </div>
 
-    <div id="CV" class="row-fluid" >
-        <div class="span7"  >
+    <div id="CV" class="row" >
+        <div class="col-md-7"  >
             <h3>PARCOURS</h3>
             <div></div>
-            <div id="CVCanvas" style="overflow: hidden; position: relative" ><img id="apercuCV" src="img/apercuCV.png" style="width: 100%;" alt="Apercu temporaire du svg de CV" />
-
+            <div id="CVCanvas" style="overflow: hidden; position: relative" ><img id="apercuCV" src="img/apercuCV.png" style="width: 100%;margin: 4px" alt="Apercu temporaire du svg de CV" />
                 </div>
             <div style="padding: 15px; background:rgba(255,255,255,0.8)">
                 <h4>Télecharger mon CV complet:</h4>
                 <ul class="fileList">
-                    <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.pdf"><img src="img/pdf.png" alt="format pdf">AnthonyBobenriethCV.pdf</a></li>
+                    <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.pdf"><img src="img/pdf.png" alt="format pdf">AnthonyBobenriethCV.pdf</a> <a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV_printable.pdf">(Version imprimable)</a></li><!--
                     <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.oxps"><img src="img/xps.png" alt="format oxps">AnthonyBobenriethCV.oxps</a></li>
-                    <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.docx"><img src="img/doc_icon.png" alt="format svg">AnthonyBobenriethCV.docx</a></li>
+                    <li><a href="http://anthony.bobenrieth.fr/AnthonyBobenriethCV.docx"><img src="img/doc_icon.png" alt="format docx">AnthonyBobenriethCV.docx</a></li>-->
                 </ul>
             </div>
        </div>
-        <div class="span5">
+        <div class="col-md-5">
             <h3>DÉTAILS</h3>
             <div id="DescptBody" >
                 <div data-target="Section4">
@@ -395,46 +409,15 @@
         </div>
     </div>
 </div>
-
-
     </div>
-
-    <div  id="ContactPage" class="row-fluid">
-        <div class="span5">
-            <h3>FORMULAIRE DE CONTACT</h3>
-            <div class="paragraphe modal-form" style="min-height: 320px">
-                <div id="contactAnswer">
-                    Message envoyé avec succès.
-                </div>
-                <form id="formContact" >
-                <fieldset style="text-align: center">
-                    <input id="NomUser" name="NomUser" class="span12" type="text" required placeholder="Votre nom..."> <br/>
-                    <input id="MailUser" name="MailUser" class="span12" type="email" required placeholder="Votre adresse email...">   <br/>
-                    <textarea id="MessageUser" name="MessageUser" class="span12" required rows="8"  placeholder="Contenue du message..."></textarea>
-                </fieldset>
-                    <div style="text-align: right">
-                        <span id="errorContact" style="color: red;"></span>
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
-                        <button id="contactBut" type="button" class="btn btn-primary"  data-loading-text="Envoi en cours...">Envoyer</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="span5">
-            <h3>ME CONTACTER PAR MAIL</h3>
-                <a class="socialNetworkEntry" style="background:#ffba18;" href="http://www.google.com/recaptcha/mailhide/d?k=016eui96WQXDuA_SCFBNRPFg==&amp;c=JcYqvWcGBL-8NI8269ZbuYDaFNDumXz3ezwRml3tpW8=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\075016eui96WQXDuA_SCFBNRPFg\75\75\46c\75JcYqvWcGBL-8NI8269ZbuYDaFNDumXz3ezwRml3tpW8\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" role="button" data-toggle="modal" ><img src="img/E-mail.png" alt="Bouton courrier"><span style="">Obtenir mon adresse mail</span></a>
-        </div>
-    </div>
-
 </div>
-<div class="navbar navbar-fixed-bottom">
+<div class="navbar navbar-fixed-bottom hidden-xs">
     <div class="container">
         <div  style="background: rgba(0,0,0,0.5); color: #ffffff; padding: 5px 20px ">
 
 
             <img src="img/html5badge.png" >
-            <span style=" vertical-align: middle; text-align: right;">© 2013 - Anthony Bobenrieth</span>
+            <span style=" vertical-align: middle; text-align: right;">CC <span id="year"></span> - Anthony Bobenrieth - <a href="http://leegargano.com/" id="iconpack" >Icon pack by Lee Gargano</a></span>
         </div>
     </div>
 </div>

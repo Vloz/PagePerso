@@ -49,7 +49,7 @@
 {
     .socialNetworkEntry{
 
-        height: 60px;
+        height: 55px;
     }
     .socialNetworkEntry span{
         margin: 0 15px;
@@ -98,7 +98,7 @@
     }
 
     h2{
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-weight: normal;
         font-size: 22px;
     }
@@ -133,7 +133,7 @@
 
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2em;
@@ -144,18 +144,18 @@ body {
 }
 
 h1{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 100;
   }
   
 h2{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: normal;
     font-size: 22px;
   }
   
 h3{
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-shadow: 0px 0px 10px white;
   }
@@ -173,8 +173,8 @@ h1, p {
 }
 
 #Onglets li{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     color: #000000;
     font-size: 36px;
     line-height: 50px;
@@ -207,6 +207,14 @@ h1, p {
     margin-top: 20px;
 }
 
+#intro>p{
+    text-align: justify;
+}
+
+#intro>h2{
+    line-height: 1em;
+}
+
 #contactAnswer{
     margin-top: 100px;
     padding: 0px 15px;
@@ -223,12 +231,12 @@ h1, p {
     width: 650px;
 }
 
-.row-fluid{
+.row{
     padding-bottom: 42px;
     display:none;
-    margin-right:  32px;
-    position: absolute;
+    margin-right:  0;
 }
+
 
 .sectionHeader  {
     border-bottom: #333 solid 1px;
@@ -255,7 +263,9 @@ h1, p {
 .sectionHeader ul li:hover{
     opacity: 1;
 }
-
+#competences li{
+    line-height: 1.5em;
+}
 .sectionBody
 {
     display: none;
@@ -285,6 +295,7 @@ h1, p {
     background:rgba(255,255,255,0.8);
     min-height: 400px;
     color: #333;
+    overflow: hidden;
 }
 
 #DescptBody > div{
@@ -296,7 +307,7 @@ h1, p {
 
 .paragraphe{
   background:rgba(255,255,255,0.8);
-  padding:15px;
+  padding:15px 22px;
   }
 
 
@@ -321,7 +332,7 @@ h1, p {
 
 .fileList li{
     list-style-type: none;
-    margin: 10px 0px;
+    margin: 10px 0;
 
 
 }
@@ -330,10 +341,14 @@ h1, p {
     color: #000;
 }
 
+#iconpack{
+    color: white;
+}
+
 #recommandation{
     position: absolute;
     top: -24px;
-    right: 0px;
+    right: 0;
 }
 
 
